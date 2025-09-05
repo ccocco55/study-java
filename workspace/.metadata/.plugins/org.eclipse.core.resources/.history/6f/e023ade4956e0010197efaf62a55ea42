@@ -1,0 +1,27 @@
+package a;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		ArrayList<Student> students = new ArrayList<>();
+		
+		String menu = "1. 학생추가 2. 모든 학생 정보 출력 3. 평균 점수 출력 4. 프로그램 종료";
+		
+		System.out.println(menu);
+		Scanner sc = new Scanner(System.in);
+		
+		if (sc.nextint() == 1) {
+			
+		}
+		
+		for (Student student: students) {
+			student.printInfo();
+		}
+		
+		
+		
+	}
+}

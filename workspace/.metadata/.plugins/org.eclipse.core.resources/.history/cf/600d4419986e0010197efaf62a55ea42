@@ -1,0 +1,39 @@
+package a;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		ArrayList<Student> students = new ArrayList<>();
+		
+		String menu = "1. 학생추가 2. 모든 학생 정보 출력 3. 평균 점수 출력 4. 프로그램 종료";
+		String nameMessage = "이름 입력:";
+		String idMessage = "학번 입력:";
+		String scoreMessage = "점수 입력:";
+				
+		System.out.println(menu);
+		Scanner sc = new Scanner(System.in);
+		int menuNumber = sc.nextInt();
+		
+		while (true) {
+			if (menuNumber == 4) {
+				break;
+			}
+			else if (menuNumber == 1) {
+				System.out.println(nameMessage);
+				
+				System.out.println(idMessage);
+				System.out.println(scoreMessage);
+			}
+		}
+		
+		for (Student student: students) {
+			student.printInfo();
+		}
+		
+		
+		
+	}
+}

@@ -1,0 +1,20 @@
+package a;
+
+public class Manger extends Employee{
+
+	public Manger(String name, int salary) {
+		super(name, salary);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void doWork() {
+		System.out.println(name + "은(는) 회의를 주관합니다.");
+		
+	}
+	
+	public void manageTeam() {
+		System.out.println(name + "이(가) 팀을 관리합니다.");
+	}
+
+}

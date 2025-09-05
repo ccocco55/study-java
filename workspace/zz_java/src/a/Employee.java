@@ -1,0 +1,70 @@
+package a;
+
+import java.util.Objects;
+
+public class Employee implements Workable {
+	protected String name;
+    protected int salary;
+	
+	@Override
+	public void doWork() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void printInfo() {
+		System.out.println(name + " | 급여: " + salary);
+	}
+
+	public Employee(String name, int salary) {
+		super();
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public Employee() {;}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(name);
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", salary=" + salary + "]";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		return Objects.equals(name, other.name);
+	}
+	
+	
+	
+	
+}

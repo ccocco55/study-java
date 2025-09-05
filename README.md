@@ -906,7 +906,7 @@ abstract class 클래스명 {
    - 인터페이스 내부에서 일반 메소드 선언 가능 (JDK 8부터)
 </details>
 
-<details> <summary><strong>p_anonymous</strong> (익 클래스)</summary>
+<details> <summary><strong>p_anonymous</strong> (익명 클래스)</summary>
 
 
 ## 내부 클래스 (Inner Class)

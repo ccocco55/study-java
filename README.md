@@ -1225,3 +1225,86 @@ synchronized(mutex){
 - JDK 5 이전 코드 호환 위해 존재, 오래된 라이브러리에서 여전히 사용 가능
 
 </details>
+
+<details> <summary><strong>w_file</strong> (파일)</summary>
+
+
+## 개요
+- **Stream**: 원본 데이터가 알맞은 인코딩 방식으로 전송되는 연결 통로  
+- **byte 단위**로 입출력 → 개별 처리 방식  
+- 성능 향상을 위해 **Buffer**를 사용하면 일괄 처리 가능  
+
+---
+
+## Writer (출력)
+
+### BufferedWriter
+- 버퍼를 사용하는 출력 클래스  
+- 효율적인 대량 쓰기 가능  
+
+### FileWriter
+- 지정한 경로의 파일을 **출력(쓰기) 모드**로 연다  
+- 파일이 없으면 새로 생성 후 열림  
+
+---
+
+## Reader (입력)
+
+### BufferedReader
+- 버퍼를 사용하는 입력 클래스  
+- 효율적인 대량 읽기 가능  
+
+### FileReader
+- 지정한 경로의 파일을 **입력(읽기) 모드**로 연다  
+- 파일이 존재하지 않으면 **FileNotFoundException** 발생  
+
+---
+
+## File 클래스
+- 지정한 경로에 있는 **파일 정보**를 담는 타입  
+- 주요 기능:
+  - 디렉터리 생성  
+  - 해당 경로의 전체 파일 목록 조회  
+  - 파일 삭제  
+
+</details>
+
+<details> 
+<summary><strong>x_jdbc</strong>(JDBC와 MVC 패턴)</summary>
+
+## JDBC (Java Database Connectivity)
+- Java와 RDB 간의 연결을 위한 기술
+
+---
+
+## 소프트웨어 디자인 설계 패턴
+
+### ▶ MVC 패턴
+애플리케이션을 **Model, View, Controller** 3가지 역할로 분리하여 설계하는 패턴  
+
+#### 1. M (Model)
+- 테이블에서 조회된 결과 값 혹은 화면으로부터 전달받은 값을 담는 클래스  
+- 클래스명 뒤에 **VO** 또는 **DTO**를 붙인다  
+  - **VO (Value Object)**  
+    - 테이블을 기반으로 만들어진 객체  
+    - **단일 테이블 조회** 시 사용  
+  - **DTO (Data Transfer Object)**  
+    - 화면에서 보여줄 여러 테이블의 데이터를 한 번에 묶어서 전달하는 객체  
+    - **여러 테이블 조회** 시 사용  
+
+#### 2. V (View)
+- 사용자에게 보여지는 화면(UI)을 구성하는 부분  
+
+#### 3. C (Controller)
+- 사용자 요청을 처리하고 Model과 View를 연결하는 역할  
+- JSP 챕터에서 구체적으로 이해할 수 있음  
+- Controller 코드가 길어지는 것을 방지하기 위해 **DBMS SQL 관련 코드를 별도의 DAO로 분리**  
+
+---
+
+### DAO (Data Access Object)
+- DB와의 연결 및 **CRUD(Create, Read, Update, Delete)** 기능을 전담하는 클래스  
+- SQL문 처리 전용 객체  
+
+</details>
+
